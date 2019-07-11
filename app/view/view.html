@@ -1,0 +1,27 @@
+<div ng-controller="ViewCtrl">
+    <div class="intro-board">
+        <img class="intro-img">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6 col-md-4" ng-repeat="item in d3charts">
+                <md-card md-theme="{{'dark-blue'}}" md-theme-watch>
+                    <md-card-title>
+                        <md-card-title-text>
+                            <span class="md-headline">{{item}}</span>
+                            <span class="md-subhead">Data Visualization</span>
+                        </md-card-title-text>
+                        <md-card-title-media>
+                            <div class="md-media-sm card-media">
+                                <img class="item-img" ng-src="{{changeSrc(item)}}">
+                            </div>
+                        </md-card-title-media>
+                    </md-card-title>
+                    <md-card-actions layout="row" layout-align="end center">
+                        <md-button ng-click="changeUrl(item)">Action 1</md-button>
+                    </md-card-actions>
+                </md-card>
+            </div>
+        </div>
+    </div>    
+</div>
